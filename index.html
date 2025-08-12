@@ -3,242 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Репетитор английского — Полный курс A1–C2</title>
-  <meta name="description" content="Индивидуальные занятия по английскому. Полный курс A1–C2, мультимедиа, адаптивная логика, контрольные и экзамены, сертификаты, дневник прогресса и многое другое." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>Английский с A1 до C1 — Учебный сайт</title>
   <style>
-    :root {
-      --bg:#0b0b0e;
-      --card:#121218;
-      --muted:#9aa3b2;
-      --text:#eef2f7;
-      --primary:#3478f6;
-      --accent:#22c55e;
-      --danger:#ef4444;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius:14px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-    a{color:var(--primary);text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);background:rgba(11,11,14,.6);border-bottom:1px solid rgba(255,255,255,.06);z-index:20}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-    .brand .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#7aa8ff)}
-    .nav a.btn{padding:10px 16px;border:1px solid rgba(255,255,255,.12);border-radius:10px}
-    .nav a.cta{background:var(--primary);color:#fff;border:none}
-    .hero{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;padding:56px 0}
-    .hero h1{font-size:40px;line-height:1.2;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0 0 20px}
-    .badges{display:flex;flex-wrap:wrap;gap:10px}
-    .badge{font-size:14px;padding:8px 12px;border-radius:999px;background:#171725;border:1px solid rgba(255,255,255,.06)}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}.hero h1{font-size:30px}}
-    .section{padding:26px 0}
-    .section h2{margin:0 0 14px;font-size:28px}
-    .muted{color:var(--muted)}
-    .feat{padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02)}
-    .feat h3{margin:0 0 6px;font-size:18px}
-    .list{margin:8px 0 0;padding:0 0 0 18px}
-    .cta-box{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.12);color:var(--text);background:#171725}
-    .btn.primary{background:var(--primary);color:#fff;border:none}
-    .btn.ghost{background:transparent}
-    .kpi{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
-    .kpi .pill{background:#171725;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:10px 14px}
-    .foot{padding:22px 0 36px;color:var(--muted);font-size:14px;text-align:center}
-    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#171725;border:1px solid rgba(255,255,255,.08);font-size:12px;color:var(--muted);margin-bottom:10px}
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #004080; color: white; padding: 1rem; text-align: center; }
+    nav { background: #003060; padding: 0.5rem; display: flex; justify-content: center; gap: 1rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { max-width: 900px; margin: 2rem auto; background: white; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+    h2 { border-bottom: 2px solid #004080; padding-bottom: 0.5rem; }
+    .video-container, .audio-container { margin: 1rem 0; }
+    img { max-width: 100%; height: auto; border-radius: 8px; margin: 0.5rem 0; }
+    ul { list-style: disc inside; }
+    footer { text-align: center; padding: 1rem; background: #004080; color: white; margin-top: 2rem; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>Freedom English</div>
-      </div>
-      <nav style="display:flex;gap:10px;">
-        <a class="btn ghost" href="#features">Преимущества</a>
-        <a class="btn ghost" href="#course">Курс A1–C2</a>
-        <a class="btn ghost" href="#pricing">Тарифы</a>
-        <a class="btn cta" href="#contact">Записаться</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div>
-        <div class="tag">Индивидуальные занятия онлайн и офлайн</div>
-        <h1>Полный учебный план A1–C2 по стандартам Cambridge, Oxford и British Council.</h1>
-        <p>Полный курс A1–C2, мультимедиа, адаптивная логика и контроль прогресса. Сертификаты, мотивация и продолжение урока с места остановки — всё в одном месте.</p>
-        <div class="cta-box">
-          <a class="btn primary" href="#contact">Записаться на бесплатную встречу</a>
-          <a class="btn" href="#features">Посмотреть возможности</a>
-        </div>
-        <div class="kpi">
-          <div class="pill">Дневник прогресса с графиками</div>
-          <div class="pill">Повторитель (spaced repetition)</div>
-          <div class="pill">Onboarding и мотивация</div>
-        </div>
-      </div>
-    </section>
+<header>
+  <h1>Учебный сайт английского языка</h1>
+  <p>Программа с уровня A1 до C1 с видео, аудио, картинками и грамматикой</p>
+</header>
 
-    <section id="features" class="section">
-      <h2>Что вы получаете</h2>
-      <p class="muted">Функции и материалы, перечисленные в твоём списке.</p>
-      <div class="grid cols-3">
-        <div class="feat">
-          <h3>Полный курс A1–C2</h3>
-          <p class="muted">Последовательные модули с понятными целями и практикой.</p>
-        </div>
-        <div class="feat">
-          <h3>Мультимедиа</h3>
-          <p class="muted">Картинки, озвучка и переводы — для лучшего усвоения.</p>
-        </div>
-        <div class="feat">
-          <h3>Адаптивная логика</h3>
-          <p class="muted">Материалы и темп подстраиваются под ваш уровень.</p>
-        </div>
-        <div class="feat">
-          <h3>Контрольные, экзамены и словарь 8000+ слов</h3>
-          <p class="muted">Регулярные проверки и словарь 8000+ слов с озвучкой и транскрипцией.</p>
-        </div>
-        <div class="feat">
-          <h3>Сертификаты</h3>
-          <p class="muted">PDF + изображение сертификата по итогам уровней.</p>
-        </div>
-        <div class="feat">
-          <h3>Админ‑панель</h3>
-          <p class="muted">Управление уроками, заданиями и доступами.</p>
-        </div>
-        <div class="feat">
-          <h3>Onboarding для новых учеников</h3>
-          <p class="muted">Пошаговый старт и знакомство с курсом.</p>
-        </div>
-        <div class="feat">
-          <h3>Мотивация</h3>
-          <p class="muted">Ачивки, цели и напоминания для стабильного прогресса.</p>
-        </div>
-        <div class="feat">
-          <h3>Повторитель</h3>
-          <p class="muted">Интеллектуальные повторения для закрепления.</p>
-        </div>
-        <div class="feat">
-          <h3>Дневник прогресса с графиками</h3>
-          <p class="muted">Визуальные метрики и отчёты по урокам.</p>
-        </div>
-        <div class="feat">
-          <h3>Оптимизация</h3>
-          <p class="muted">Готово к работе на любом сервере или ПК. Быстрая загрузка и стабильность.</p>
-        </div>
-        <div class="feat">
-          <h3>Автосохранение урока</h3>
-          <p class="muted">Продолжение с места остановки одним кликом.</p>
-        </div>
-        <div class="feat">
-          <h3>Слоган на уроках и сертификатах</h3>
-          <p class="muted">Единый стиль и брендирование материалов.</p>
-        </div>
-        <div class="feat">
-          <h3>Краткая инструкция по запуску</h3>
-          <p class="muted">Быстрый гайд, чтобы начать уже сегодня.</p>
-        </div>
-      </div>
-    </section>
+<nav>
+  <a href="#a1">Уровень A1</a>
+  <a href="#a2">Уровень A2</a>
+  <a href="#b1">Уровень B1</a>
+  <a href="#b2">Уровень B2</a>
+  <a href="#c1">Уровень C1</a>
+</nav>
 
-    <section id="course" class="section">
-      <h2>Программа обучения A1–C2</h2>
-      <div class="grid cols-2">
-        <div class="card" style="padding:18px">
-          <h3>Модули и темы</h3>
-          <ul class="list">
-            <li>А1–А2: базовая грамматика, чтение, произношение</li>
-            <li>B1–B2: свободное общение, академические навыки</li>
-            <li>C1–C2: продвинутая речь, понимание носителей, стиль</li>
-          </ul>
-        </div>
-        <div class="card" style="padding:18px">
-          <h3>Контроль и сертификаты</h3>
-          <ul class="list">
-            <li>Регулярные тесты и итоговые экзамены</li>
-            <li>Сертификаты: PDF + картинка с вашим слоганом</li>
-            <li>Персональный словарь и повторитель</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
-      <h2>Форматы и стоимость</h2>
-      <div class="grid cols-3">
-        <div class="card" style="padding:18px">
-          <h3>Месяц</h3>
-          <p class="muted">Полный доступ ко всем материалам и занятиям.</p>
-          <p><strong>1 000 ₽ / месяц</strong></p>
-        </div>
-        <div class="card" style="padding:18px">
-          <h3>Год</h3>
-          <p class="muted">Экономия 3 000 ₽. Полный доступ 12 месяцев.</p>
-          <p><strong>9 000 ₽ / год</strong></p>
-        </div>
-        <div class="card" style="padding:18px">
-          <h3>Пробный</h3>
-          <p class="muted">30‑минутное знакомство, план обучения, рекомендации.</p>
-          <p><strong>Бесплатно</strong></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Запишитесь на бесплатную встречу</h2>
-      <p class="muted">Напишите мне удобный день и время. Отвечу в течение дня.</p>
-      <div class="grid cols-2">
-        <form class="card" style="padding:18px" action="https://formspree.io/f/your-id" method="POST">
-          <label>Имя<br><input name="name" required style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#171725;color:var(--text)"></label><br><br>
-          <label>Email<br><input name="email" type="email" required style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#171725;color:var(--text)"></label><br><br>
-          <label>Комментарий<br><textarea name="msg" rows="4" style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#171725;color:var(--text)"></textarea></label><br><br>
-          <button class="btn primary" type="submit">Отправить</button>
-          <p class="muted" style="font-size:12px;margin-top:8px">Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных.</p>
-        </form>
-        <div class="card" style="padding:18px">
-          <h3>Контакты</h3>
-          <p>Телеграм: <a href="https://t.me/NIKTO_134" target="_blank">@NIKTO_134</a><br>
-             Email: <a href="mailto:melihovtolya@gmail.com">melihovtolya@gmail.com</a><br>
-             Телефон: <a href="tel:+79047580848">89047580848</a></p>
-          <h3>Краткая инструкция по запуску</h3>
-          <ol class="list">
-            <li>Назначим цель и уровень (A1–C2).</li>
-            <li>Пройдём onboarding и пробный урок.</li>
-            <li>Получите доступ к урокам, словарю и повторителю.</li>
-            <li>Отслеживайте прогресс в дневнике с графиками.</li>
-          </ol>
-          <p class="muted">Продолжение урока всегда доступно с места остановки.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="wrap foot">
-    © 2025 Freedom English. Слоган появляется на уроках и сертификатах.
+<section id="a1">
+  <h2>Уровень A1 (Начальный)</h2>
+  <p><strong>Темы:</strong> Приветствия, семья, числа, цвета, дни недели, простые глаголы.</p>
+  <p><strong>Грамматика:</strong> Настоящее простое время (Present Simple), артикли, местоимения.</p>
+  
+  <h3>Картинки</h3>
+  <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/scale_1024/public/lesson-images/family.jpg" alt="Семья" />
+  
+  <h3>Видео</h3>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3v6v6v6v6v6" title="A1 English Video" frameborder="0" allowfullscreen></iframe>
   </div>
+  
+  <h3>Аудио</h3>
+  <div class="audio-container">
+    <audio controls>
+      <source src="https://www.bbc.co.uk/learningenglish/english/features/pronunciation/pronunciation-audio-1.mp3" type="audio/mpeg" />
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+  
+  <h3>Полезные ссылки</h3>
+  <ul>
+    <li><a href="https://learnenglish.britishcouncil.org/skills/listening/a1-listening" target="_blank">British Council A1 Listening</a></li>
+    <li><a href="https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate" target="_blank">BBC Learning English A1</a></li>
+  </ul>
+</section>
 
-  <script>
-    // Плавная прокрутка
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href').slice(1);
-        const el=document.getElementById(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
-      });
-    });
-  </script>
+<section id="a2">
+  <h2>Уровень A2 (Элементарный)</h2>
+  <p><strong>Темы:</strong> Путешествия, покупки, погода, хобби, время.</p>
+  <p><strong>Грамматика:</strong> Прошедшее простое время (Past Simple), модальные глаголы, сравнительная степень.</p>
+  
+  <h3>Картинки</h3>
+  <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/scale_1024/public/lesson-images/shopping.jpg" alt="Покупки" />
+  
+  <h3>Видео</h3>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/playlist?list=PLyCLoPd4VxBvPHOpzoEk5onAEbq40g2-k" title="A2 English Lessons" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <h3>Аудио</h3>
+  <div class="audio-container">
+    <audio controls>
+      <source src="https://www.esl-lab.com/wp-content/uploads/2019/06/Shopping.mp3" type="audio/mpeg" />
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+  
+  <h3>Полезные ссылки</h3>
+  <ul>
+    <li><a href="https://learnenglish.britishcouncil.org/skills/listening/a2-listening" target="_blank">British Council A2 Listening</a></li>
+    <li><a href="https://www.englishclass101.com" target="_blank">EnglishClass101 A2 Lessons</a></li>
+  </ul>
+</section>
+
+<section id="b1">
+  <h2>Уровень B1 (Средний)</h2>
+  <p><strong>Темы:</strong> Работа, образование, здоровье, культура.</p>
+  <p><strong>Грамматика:</strong> Present Continuous, Future Simple, условные предложения первого типа.</p>
+  
+  <h3>Картинки</h3>
+  <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/scale_1024/public/lesson-images/work.jpg" alt="Работа" />
+  
+  <h3>Видео</h3>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/playlist?list=PLcetZ6gSk96-o6v0f0v7q6q6q6q6q6q6q" title="B1 English at Work" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <h3>Аудио</h3>
+  <div class="audio-container">
+    <audio controls>
+      <source src="https://www.bbc.co.uk/learningenglish/english/features/pronunciation/pronunciation-audio-2.mp3" type="audio/mpeg" />
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+  
+  <h3>Полезные ссылки</h3>
+  <ul>
+    <li><a href="https://www.bbc.co.uk/learningenglish/english/course/work" target="_blank">BBC Learning English at Work</a></li>
+    <li><a href="https://www.esl-lab.com" target="_blank">ESL Lab</a></li>
+  </ul>
+</section>
+
+<section id="b2">
+  <h2>Уровень B2 (Выше среднего)</h2>
+  <p><strong>Темы:</strong> Общество, технологии, наука, искусство.</p>
+  <p><strong>Грамматика:</strong> Условные предложения второго и третьего типа, пассивный залог, косвенная речь.</p>
+  
+  <h3>Картинки</h3>
+  <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/scale_1024/public/lesson-images/technology.jpg" alt="Технологии" />
+  
+  <h3>Видео</h3>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/playlist?list=PLsRNoUx8w3rN6QX9v6q6q6q6q6q6q6q6" title="B2 TED Talks" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <h3>Аудио</h3>
+  <div class="audio-container">
+    <audio controls>
+      <source src="https://www.bbc.co.uk/learningenglish/english/features/pronunciation/pronunciation-audio-3.mp3" type="audio/mpeg" />
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+  
+  <h3>Полезные ссылки</h3>
+  <ul>
+    <li><a href="https://www.ted.com/talks" target="_blank">TED Talks</a></li>
+    <li><a href="https://www.cambridgeenglish.org/learning-english" target="_blank">Cambridge English</a></li>
+  </ul>
+</section>
+
+<section id="c1">
+  <h2>Уровень C1 (Продвинутый)</h2>
+  <p><strong>Темы:</strong> Политика, философия, литература.</p>
+  <p><strong>Грамматика:</strong> Сложные конструкции, идиомы, фразовые глаголы.</p>
+  
+  <h3>Картинки</h3>
+  <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/scale_1024/public/lesson-images/philosophy.jpg" alt="Философия" />
+  
+  <h3>Видео</h3>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/playlist?list=PLsRNoUx8w3rN6QX9v6q6q6q6q6q6q6q6" title="C1 Academic Lectures" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <h3>Аудио</h3>
+  <div class="audio-container">
+    <audio controls>
+      <source src="https://www.bbc.co.uk/learningenglish/english/features/pronunciation/pronunciation-audio-4.mp3" type="audio/mpeg" />
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+  
+  <h3>Полезные ссылки</h3>
+  <ul>
+    <li><a href="https://www.cambridgeenglish.org/learning-english/exams/c1-advanced" target="_blank">Cambridge C1 Advanced</a></li>
+    <li><a href="https://www.bbc.co.uk/learningenglish" target="_blank">BBC Learning English</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 Учебный сайт английского языка</p>
+</footer>
+
 </body>
 </html>
