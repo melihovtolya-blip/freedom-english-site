@@ -16,6 +16,34 @@
     img { max-width: 100%; height: auto; border-radius: 8px; margin: 0.5rem 0; }
     ul { list-style: disc inside; }
     footer { text-align: center; padding: 1rem; background: #004080; color: white; margin-top: 2rem; }
+    
+    /* Стили для урока A1 */
+    .lesson-container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    .card { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 6px 24px rgba(0,0,0,0.06); margin-bottom: 22px; }
+    h1 { font-size: 2rem; color: #1a202c; margin-bottom: 8px; }
+    h3 { font-size: 1.4rem; color: #1a202c; margin-bottom: 12px; }
+    .goals { background:#f7fafc; border-left: 4px solid #6366f1; padding: 14px; border-radius: 8px; }
+    .image { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.08); margin: 14px 0; }
+    .alphabet-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 12px; }
+    .letter { background: linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; text-align:center; border-radius:10px; padding:14px 0; font-weight:700; }
+    .vocab { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px; margin-top: 12px; }
+    .vcard { background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px; }
+    .vword { color:#4f46e5; font-weight:700; }
+    .vtran { color:#6b7280; font-size: .95rem; margin-top: 4px; }
+    .dialog { background:#f7fafc; border-radius:10px; padding: 12px; border-left: 4px solid #10b981; margin-top: 12px; }
+    .line { background:#fff; border-radius:8px; padding:10px; margin:8px 0; border-left:3px solid #e5e7eb; }
+    .a { border-left-color:#10b981; }
+    .b { border-left-color:#f59e0b; }
+    .exercise { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:14px; margin-top: 12px; }
+    .q { background:#fff; border-left:4px solid #6366f1; border-radius:8px; padding:10px; margin:10px 0; }
+    input[type="text"], input[type="number"] { width: 100%; padding:10px; border:1.5px solid #e5e7eb; border-radius:8px; margin-top:8px; font-size: 1rem; }
+    input:focus { outline:none; border-color:#6366f1; }
+    .btn { background:#10b981; color:#fff; border:none; padding:10px 16px; border-radius:8px; cursor:pointer; margin-top:10px; }
+    .btn:hover { background:#0ea371; }
+    .result { margin-top:10px; }
+    .progress { height:10px; background:#e5e7eb; border-radius:6px; overflow:hidden; margin-top:14px; }
+    .fill { height:100%; width:0%; background: linear-gradient(90deg,#6366f1,#8b5cf6); transition: width .4s ease; }
+    @media (max-width: 720px) { .alphabet-grid { grid-template-columns: repeat(4,1fr); } }
   </style>
 </head>
 <body>
@@ -34,31 +62,125 @@
 </nav>
 
 <section id="a1">
-  <h2>Уровень A1 (Начальный)</h2>
-  <p><strong>Темы:</strong> Приветствия, семья, числа, цвета, дни недели, простые глаголы.</p>
-  <p><strong>Грамматика:</strong> Настоящее простое время (Present Simple), артикли, местоимения.</p>
-  
-  <h3>Картинки</h3>
-  <img src="https://learnenglish.britishcouncil.org/sites/podcasts/files/styles/scale_1024/public/lesson-images/family.jpg" alt="Семья" />
-  
-  <h3>Видео</h3>
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/3v6v6v6v6v6" title="A1 English Video" frameborder="0" allowfullscreen></iframe>
+  <div class="lesson-container">
+    <div class="card">
+      <h1>Lesson A1-1</h1>
+      <h2>Alphabet, Greetings & "to be" (I/You)</h2>
+      <div class="goals">
+        By the end of this lesson you can: say the alphabet A–Z, greet and introduce yourself, use I am / You are, and ask/answer "What's your name?" and "How are you?".
+      </div>
+      <div class="progress"><div id="prog" class="fill"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>English Alphabet</h3>
+      <img class="image" src="https://cdn.abacus.ai/images/33f6c78e-4987-4215-8848-6f0137b78f76.png" alt="Alphabet poster" />
+      <div class="alphabet-grid">
+        <div class="letter">Aa</div><div class="letter">Bb</div><div class="letter">Cc</div><div class="letter">Dd</div><div class="letter">Ee</div><div class="letter">Ff</div>
+        <div class="letter">Gg</div><div class="letter">Hh</div><div class="letter">Ii</div><div class="letter">Jj</div><div class="letter">Kk</div><div class="letter">Ll</div>
+        <div class="letter">Mm</div><div class="letter">Nn</div><div class="letter">Oo</div><div class="letter">Pp</div><div class="letter">Qq</div><div class="letter">Rr</div>
+        <div class="letter">Ss</div><div class="letter">Tt</div><div class="letter">Uu</div><div class="letter">Vv</div><div class="letter">Ww</div><div class="letter">Xx</div>
+        <div class="letter">Yy</div><div class="letter">Zz</div>
+      </div>
+      <p style="margin-top:10px;color:#4b5563;">Tip: H = aitch, J = jay, R = ar, W = double u, Y = why.</p>
+    </div>
+
+    <div class="card">
+      <h3>Vocabulary</h3>
+      <div class="vocab">
+        <div class="vcard"><div class="vword">Hello!</div><div class="vtran">Привет</div></div>
+        <div class="vcard"><div class="vword">Hi!</div><div class="vtran">Привет (неформ.)</div></div>
+        <div class="vcard"><div class="vword">Good morning</div><div class="vtran">Доброе утро</div></div>
+        <div class="vcard"><div class="vword">Good afternoon</div><div class="vtran">Добрый день</div></div>
+        <div class="vcard"><div class="vword">Goodbye / Bye</div><div class="vtran">До свидания / Пока</div></div>
+        <div class="vcard"><div class="vword">What's your name?</div><div class="vtran">Как тебя зовут?</div></div>
+        <div class="vcard"><div class="vword">My name is… / I'm…</div><div class="vtran">Меня зовут… / Я…</div></div>
+        <div class="vcard"><div class="vword">Nice to meet you</div><div class="vtran">Приятно познакомиться</div></div>
+        <div class="vcard"><div class="vword">How are you?</div><div class="vtran">Как дела?</div></div>
+        <div class="vcard"><div class="vword">I'm fine, thanks</div><div class="vtran">Хорошо, спасибо</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Grammar: I / You + be</h3>
+      <div class="dialog">
+        <div class="line">I am Alex → I'm Alex.</div>
+        <div class="line">You are Maria → You're Maria.</div>
+        <div class="line">Questions: Am I…? Are you…?</div>
+        <div class="line">Short answers: Yes, I am / No, I'm not; Yes, you are / No, you aren't.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Dialogues</h3>
+      <img class="image" src="https://cdn.abacus.ai/images/01e4348e-79c2-44f4-a280-f00a66fd4769.png" alt="Greetings" />
+      <div class="dialog">
+        <div class="line a"><strong>A:</strong> Hello!</div>
+        <div class="line b"><strong>B:</strong> Hi!</div>
+        <div class="line a"><strong>A:</strong> What's your name?</div>
+        <div class="line b"><strong>B:</strong> I'm Anna. What's your name?</div>
+        <div class="line a"><strong>A:</strong> I'm Mark. Nice to meet you, Anna.</div>
+        <div class="line b"><strong>B:</strong> Nice to meet you, too.</div>
+      </div>
+      <div class="dialog">
+        <div class="line a"><strong>A:</strong> Good morning! How are you?</div>
+        <div class="line b"><strong>B:</strong> I'm fine, thanks. And you?</div>
+        <div class="line a"><strong>A:</strong> I'm good. Thank you.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Exercises</h3>
+
+      <div class="exercise" id="ex1">
+        <div class="q">Fill in am / are:<br/>
+          1) I ____ Anna. <input id="ex1q1" type="text" placeholder="am or are?">
+        </div>
+        <div class="q">2) You ____ Mark. <input id="ex1q2" type="text"></div>
+        <div class="q">3) I ____ fine. <input id="ex1q3" type="text"></div>
+        <div class="q">4) You ____ a student. <input id="ex1q4" type="text"></div>
+        <button class="btn" onclick="checkEx1()">Check</button>
+        <div class="result" id="ex1r"></div>
+      </div>
+
+      <div class="exercise" id="ex2">
+        <div class="q">Complete short answers:<br/>
+          1) Are you Anna? — Yes, I _____. <input id="ex2q1" type="text" placeholder="am">
+        </div>
+        <div class="q">2) Are you tired? — No, I ____ _____. <input id="ex2q2" type="text" placeholder="'m not / am not"></div>
+        <button class="btn" onclick="checkEx2()">Check</button>
+        <div class="result" id="ex2r"></div>
+      </div>
+
+      <div class="exercise" id="ex3">
+        <div class="q">Put the dialogue in order (1–6):</div>
+        <div class="q"><input id="o1" type="number" min="1" max="6" style="width:70px;"> Hello!</div>
+        <div class="q"><input id="o2" type="number" min="1" max="6" style="width:70px;"> Hi!</div>
+        <div class="q"><input id="o3" type="number" min="1" max="6" style="width:70px;"> What's your name?</div>
+        <div class="q"><input id="o4" type="number" min="1" max="6" style="width:70px;"> I'm Anna. What's your name?</div>
+        <div class="q"><input id="o5" type="number" min="1" max="6" style="width:70px;"> I'm Mark. Nice to meet you, Anna.</div>
+        <div class="q"><input id="o6" type="number" min="1" max="6" style="width:70px;"> Nice to meet you, too.</div>
+        <button class="btn" onclick="checkEx3()">Check</button>
+        <div class="result" id="ex3r"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Homework</h3>
+      <ul style="margin-left:18px;">
+        <li>Напишите мини-диалог (6–8 реплик) с Hello/Hi, What's your name?, Nice to meet you, How are you?, I'm fine, thanks.</li>
+        <li>Сделайте 5 предложений о себе с "I am …" и 5 вопросов с "Are you …?"</li>
+        <li>Выучите 10 фраз вежливости (Hello, Hi, Good morning, Good afternoon, Goodbye, Bye, Please, Thank you, You're welcome, Excuse me).</li>
+      </ul>
+      <div class="progress"><div id="prog2" class="fill"></div></div>
+      <div class="exercise" style="margin-top:12px;">
+        <label><input type="checkbox" onchange="upd()"> I can say the alphabet A–Z</label><br/>
+        <label><input type="checkbox" onchange="upd()"> I can greet and introduce myself</label><br/>
+        <label><input type="checkbox" onchange="upd()"> I can ask/answer "What's your name?"</label><br/>
+        <label><input type="checkbox" onchange="upd()"> I can use I am / You are</label>
+      </div>
+    </div>
   </div>
-  
-  <h3>Аудио</h3>
-  <div class="audio-container">
-    <audio controls>
-      <source src="https://www.bbc.co.uk/learningenglish/english/features/pronunciation/pronunciation-audio-1.mp3" type="audio/mpeg" />
-      Ваш браузер не поддерживает аудио.
-    </audio>
-  </div>
-  
-  <h3>Полезные ссылки</h3>
-  <ul>
-    <li><a href="https://learnenglish.britishcouncil.org/skills/listening/a1-listening" target="_blank">British Council A1 Listening</a></li>
-    <li><a href="https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate" target="_blank">BBC Learning English A1</a></li>
-  </ul>
 </section>
 
 <section id="a2">
@@ -176,6 +298,55 @@
 <footer>
   <p>© 2025 Учебный сайт английского языка</p>
 </footer>
+
+<script>
+  function checkEx1() {
+    const a = v => v.trim().toLowerCase();
+    const ans = ['am','are','am','are'];
+    const ids = ['ex1q1','ex1q2','ex1q3','ex1q4'];
+    let correct=0, out='';
+    ids.forEach((id,i)=> {
+      const ok = a(document.getElementById(id).value) === ans[i];
+      correct += ok?1:0;
+      out += `<p style="color:${ok?'#059669':'#dc2626'}">${ok?'✓':'✗'} Q${i+1}: ${ok?'Correct':'Answer: '+ans[i]}</p>`;
+    });
+    document.getElementById('ex1r').innerHTML = out + `<p><strong>Score: ${correct}/4</strong></p>`;
+  }
+  function checkEx2() {
+    const a = v => v.trim().toLowerCase();
+    const v1 = a(document.getElementById('ex2q1').value);
+    const v2 = a(document.getElementById('ex2q2').value);
+    let c=0, out='';
+    if (v1==='am'){ c++; out+=`<p style="color:#059669">✓ Q1: Correct</p>`; }
+    else out+=`<p style="color:#dc2626">✗ Q1: Answer: am</p>`;
+    if (v2==="'m not" || v2=="'m not" || v2==="am not"){ c++; out+=`<p style="color:#059669">✓ Q2: Correct</p>`; }
+    else out+=`<p style="color:#dc2626">✗ Q2: Answers: 'm not / am not</p>`;
+    document.getElementById('ex2r').innerHTML = out + `<p><strong>Score: ${c}/2</strong></p>`;
+  }
+  function checkEx3() {
+    const correct=[1,2,3,4,5,6];
+    const ids=['o1','o2','o3','o4','o5','o6'];
+    let c=0, out='';
+    ids.forEach((id,i)=>{
+      const val = parseInt(document.getElementById(id).value,10);
+      const ok = val===correct[i];
+      c += ok?1:0;
+      out += `<p style="color:${ok?'#059669':'#dc2626'}">${ok?'✓':'✗'} Sentence ${i+1}: ${ok?'Correct':'Should be '+correct[i]}</p>`;
+    });
+    document.getElementById('ex3r').innerHTML = out + `<p><strong>Score: ${c}/6</strong></p>`;
+  }
+  function upd(){
+    const checks=document.querySelectorAll('input[type="checkbox"]');
+    const total=checks.length, done=[...checks].filter(c=>c.checked).length;
+    const p = Math.round(done/total*100);
+    document.getElementById('prog').style.width = p+'%';
+    document.getElementById('prog2').style.width = p+'%';
+  }
+  document.addEventListener('DOMContentLoaded', upd);
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
